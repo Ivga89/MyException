@@ -2,10 +2,21 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        List<string> names = new List<string> { "Иванов", "Петров", "Сидоров", "Алексеев", "Борисов" };
+
     }
 
-    
+    static void SortAscending(List<string> names)
+    {
+        names.Sort();
+    }
+
+    static void SortDescending(List<string> names)
+    {
+        names.Sort();
+        names.Reverse();
+    }
+
 }
 
 public class MyException : Exception
@@ -23,3 +34,4 @@ public class SortingEvents
         SortEvent?.Invoke(names);
     }
 }
+
