@@ -7,6 +7,12 @@ internal class Program
     {
         List<string> names = new List<string> { "Иванов", "Петров", "Сидоров", "Алексеев", "Борисов" };
 
+        Console.WriteLine("Изначальный список фамилий:");
+        foreach (var name in names)
+        {
+            Console.WriteLine(name);
+        }
+
         SortingEvents sortingEvents = new SortingEvents();
 
         while (true)
@@ -88,7 +94,7 @@ public class SortingEvents
 
     public int Read()
     {
-        Console.WriteLine("Введите число 1 для сортировки А-Я или число 2 для сортировки Я-А:");
+        Console.WriteLine("\nВведите число 1 для сортировки А-Я или число 2 для сортировки Я-А:");
         int input = Convert.ToInt32(Console.ReadLine());
         if (input != 1 && input != 2) throw new InvalidInputException();
         return input;
